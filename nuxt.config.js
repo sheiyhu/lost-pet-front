@@ -60,7 +60,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL : 'https://sweetcode.io/deploying-express-node-js-backend-heroku/api/'
+    baseURL : 'https://lost-pet-backend.herokuapp.com/api/'
   },
   /*
   ** Build configuration
