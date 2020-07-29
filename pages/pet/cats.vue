@@ -25,7 +25,7 @@ export default {
   },
   async asyncData({$axios}) {
     try {
-      let data = await $axios.$get("http://localhost:3000/api/pets/Cat")
+      let data = await $axios.$get("pets/Cat")
       return {pets : data}
     } catch (e) {
       console.error("SOMETHING WENT WRONG :" + e);

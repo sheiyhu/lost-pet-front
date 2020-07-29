@@ -57,7 +57,7 @@ export default {
   },
   async asyncData({ params, $axios }) {
     try {
-      let pet = await $axios.$get(`http://localhost:3000/api/pet/${params.id}`)
+      let pet = await $axios.$get(`pet/${params.id}`)
       return { pet };
     } catch (e) {
       console.error("SOMETHING WENT WRONG :" + e);

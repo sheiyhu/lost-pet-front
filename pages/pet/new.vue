@@ -160,7 +160,7 @@ export default {
         formData.append(data, this.pet[data]);
       }
       try {
-        let response = await this.$axios("http://localhost:3000/api/pets", {
+        let response = await this.$axios("pets", {
           method: "post",
           data: formData
         });
