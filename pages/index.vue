@@ -2,13 +2,13 @@
 
 <template>
   <div>
-    <header-component/>
+    <header-component />
     <!-- begin main content -->
     <section class="main-content">
       <div class="container">
         <h1 class="title has-text-centered">Available pets</h1>
         <div>
-         <list-component :pets=pets />
+          <list-component :pets="pets" />
         </div>
       </div>
     </section>
@@ -17,21 +17,22 @@
 </template>
 
 <script>
-import listComponent from "~/components/listComponent";
-import headerComponent from "~/components/headerComponent";
+import listComponent from '~/components/listComponent'
+import headerComponent from '~/components/headerComponent'
 export default {
   head: {
-    title: "Home"
+    title: 'Home',
   },
   components: {
-    listComponent,headerComponent
+    listComponent,
+    headerComponent,
   },
-  async asyncData({$axios}) {
+  async asyncData({ $axios }) {
     try {
-      let data = await $axios.$get("pets")
-      return {pets : data}
+      let data = await $axios.$get('pets')
+      return { pets: data }
     } catch (e) {
-      console.error("SOMETHING WENT WRONG :" + e);
+      console.error('SOMETHING WENT WRONG :' + e)
     }
   },
   // data() {
@@ -39,5 +40,5 @@ export default {
   //     pets: []
   //   };
   // }
-};
+}
 </script>
